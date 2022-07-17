@@ -84,7 +84,7 @@ if ($.env.isRequest) {
 } else if (!reqData.headers.Cookie.includes('c_secure')) {
   $.notify('HDSky', ``, `Cookie关键授权字段缺失, 需重新获取!`);
 } else {
-  $.http.put(reqData)
+  $.http.post(reqData)
     .then((resp) => {
       if (resp.body.success == true) {
         $.msgBody = date.getMonth() + 1 + "月" + date.getDate() + "日, 签到成功 🎉" +"魔力值增加" +resp.body.message
