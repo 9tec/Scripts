@@ -86,7 +86,8 @@ if ($.env.isRequest) {
 } else {
   $.http.post(reqData)
     .then((resp) => {
-      const mess = resp.body.message 
+      const cc = JSON.parse(data)
+      const mess = cc.data.message 
       if (resp.body.match(/true/)) {
         $.msgBody = date.getMonth() + 1 + "月" + date.getDate() + "日, 签到成功 🎉" +"魔力值增加" + mess
       } else if (resp.body.match(/false/)) {
