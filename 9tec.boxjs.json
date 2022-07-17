@@ -12,9 +12,9 @@
             "descs_html": [
                 "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js\">脚本注释</a></h4>"
             ],
-            "script": "https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js",
-            "author": "@NobyDa",
-            "repo": "https://github.com/NobyDa/Script/blob/master/52pojie-DailyBonus/52pojie.js",
+            "script": "https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js",
+            "author": "@9tec",
+            "repo": "https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js",
             "icons": ["https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/52pj.png", "https://raw.githubusercontent.com/NobyDa/mini/master/Color/52pj.png"]
         }
     ]
