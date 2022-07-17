@@ -31,9 +31,9 @@ Surge 4.2.0+ 脚本配置:
 ************************
 
 [Script]
-HDSky签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+HDSky签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
-HDSky获取Cookie = type=http-request,pattern=https:\/\/HDSky\.me\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+HDSky获取Cookie = type=http-request,pattern=https:\/\/HDSky\.me\?,script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
 [MITM] 
 hostname= HDSky.me
@@ -44,11 +44,11 @@ QuantumultX 远程脚本配置:
 
 [task_local]
 # HDSky签到
-0 9 * * * https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+0 9 * * * https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
 [rewrite_local]
 # 获取Cookie
-https:\/\/HDSky\.me\? url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+https:\/\/HDSky\.me\? url script-request-header https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
 [mitm] 
 hostname= HDSky.me
@@ -59,10 +59,10 @@ Loon 2.1.0+ 脚本配置:
 
 [Script]
 # HDSky签到
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
 # 获取Cookie
-http-request https:\/\/HDSky\.me\? script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+http-request https:\/\/HDSky\.me\? script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
 [Mitm] 
 hostname= HDSky.me
@@ -89,7 +89,7 @@ if ($.env.isRequest) {
       if (resp.body.match(/true/)) {
         $.msgBody = date.getMonth() + 1 + "月" + date.getDate() + "日, 签到成功 🎉"
       } else if (resp.body.match(/date_unmatch/)) {
-        $.msgBody = "签到失败, Cookie失效 ‼️‼️"
+        $.msgBody = "今日已签到 ‼️‼️"
       } else if (resp.body.match(/flase/)) {
         $.msgBody = "签到失败, Cookie失效 ‼️‼️"
       } else if (resp.statusCode == 403) {
