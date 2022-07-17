@@ -91,13 +91,11 @@ if ($.env.isRequest) {
       if (resp.body.match(/true/)) {
         $.msgBody = date.getMonth() + 1 + "月" + date.getDate() + "日, 签到成功 🎉" +"魔力值增加" + mess
       } else if (resp.body.match(/false/)) {
-        $.msgBody = "签到失败" + mess
-      } else if (resp.body.match(/flase/)) {
-        $.msgBody = "签到失败, Cookie失效 ‼️‼️"
+        $.msgBody = "签到失败⚠️" + mess
       } else if (resp.statusCode == 403) {
-        $.msgBody = "服务器暂停签到 ⚠️"
+        $.msgBody = "服务器403 ⚠️"
       } else {
-        $.msgBody = "脚本待更新 ‼️‼️"
+        $.msgBody = "异常失败⚠️"
       }
     })
     .catch((err) => ($.msgBody = `签到失败 ‼️‼️\n${err || err.message}`))
