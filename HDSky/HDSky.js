@@ -3,7 +3,7 @@ HDSky签到脚本
 
 更新时间: 2022.7.17
 脚本兼容: QuantumultX, Surge, Loon, Node.js
-
+学习自Nobyda脚本
 
 ************************
 QX, Surge, Loon说明：
