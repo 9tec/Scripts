@@ -86,10 +86,10 @@ if ($.env.isRequest) {
 } else {
   $.http.put(reqData)
     .then((resp) => {
-      if (resp.body.match(/true/)) {
-        $.msgBody = date.getMonth() + 1 + "月" + date.getDate() + "日, 签到成功 🎉"
-      } else if (resp.body.match(/date_unmatch/)) {
-        $.msgBody = "今日已签到 ‼️‼️"
+      if (resp.body.success == true) {
+        $.msgBody = date.getMonth() + 1 + "月" + date.getDate() + "日, 签到成功 🎉" +"魔力值增加" +resp.body.message
+      } else if (resp.body.success == false) {
+        $.msgBody = "签到失败" + resp.body.message
       } else if (resp.body.match(/flase/)) {
         $.msgBody = "签到失败, Cookie失效 ‼️‼️"
       } else if (resp.statusCode == 403) {
