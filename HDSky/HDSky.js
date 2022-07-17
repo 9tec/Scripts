@@ -33,7 +33,7 @@ Surge 4.2.0+ 脚本配置:
 [Script]
 HDSky签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
-HDSky获取Cookie = type=http-request,pattern=https:\/\/HDSky\.me\?,script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
+HDSky获取Cookie = type=http-request,pattern=https:\/\/HDSky\.me\/?.?,script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
 [MITM] 
 hostname= HDSky.me
@@ -48,7 +48,7 @@ QuantumultX 远程脚本配置:
 
 [rewrite_local]
 # 获取Cookie
-https:\/\/HDSky\.me\? url script-request-header https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
+https:\/\/HDSky\.me\/?.? url script-request-header https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
 [mitm] 
 hostname= HDSky.me
@@ -62,7 +62,7 @@ Loon 2.1.0+ 脚本配置:
 cron "0 9 * * *" script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
 # 获取Cookie
-http-request https:\/\/HDSky\.me\? script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
+http-request https:\/\/HDSky\.me\/?.? script-path=https://raw.githubusercontent.com/9tec/Scripts/main/HDSky/HDSky.js
 
 [Mitm] 
 hostname= HDSky.me
