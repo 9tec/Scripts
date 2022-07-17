@@ -1,0 +1,21 @@
+{
+    "id": "9tec",
+    "name": "HDSky",
+    "author": "@9tec",
+    "icon": "https://avatars2.githubusercontent.com/u/12446619?s=460&v=4",
+    "repo": "https://github.com/9tec/scripts",
+    "apps": [
+        {
+            "id": "HDSky",
+            "name": "HDSky",
+            "keys": ["HDSky"],
+            "descs_html": [
+                "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js\">脚本注释</a></h4>"
+            ],
+            "script": "https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js",
+            "author": "@NobyDa",
+            "repo": "https://github.com/NobyDa/Script/blob/master/52pojie-DailyBonus/52pojie.js",
+            "icons": ["https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/52pj.png", "https://raw.githubusercontent.com/NobyDa/mini/master/Color/52pj.png"]
+        }
+    ]
+}
