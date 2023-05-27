@@ -22,7 +22,10 @@ jobs:
           sed -i 's|rtp://|http://192.168.2.1:8686/rtp/|g' iptv.m3u
 
       - name: Commit changes
+        env:
+          ACCESS_TOKEN: ${{ secrets.TOKENNAME }}
         run: |
+          git add oiptv.m3u
           git add iptv.m3u
           git commit -m "Replace content in iptv"
           git push
