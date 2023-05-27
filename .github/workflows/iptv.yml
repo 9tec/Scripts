@@ -1,0 +1,28 @@
+name: Copy and Replace File
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  copy_file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download source file
+        run: |
+          curl -o oiptv.m3u https://raw.githubusercontent.com/wuwentao/bj-unicom-iptv/master/bj-unicom-iptv.m3u
+
+      - name: Copy file and replace content
+        run: |
+          cp oiptv.m3u iptv.m3u
+          sed -i 's|rtp://|http://192.168.2.1:8686/rtp/|g' iptv.m3u
+
+      - name: Commit changes
+        run: |
+          git add iptv.m3u
+          git commit -m "Replace content in iptv"
+          git push
