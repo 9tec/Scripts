@@ -12,6 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@master
 
+      - name: Set up Git
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          
       - name: Download source file
         run: |
           curl -o oiptv.m3u https://raw.githubusercontent.com/wuwentao/bj-unicom-iptv/master/bj-unicom-iptv.m3u
