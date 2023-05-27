@@ -1,8 +1,8 @@
 name: Copy and Replace File
 
 on:
-  schedule:
-    - cron: "25 17 * * *"
+  workflow_dispatch:
+
 
 jobs:
   copy_file:
