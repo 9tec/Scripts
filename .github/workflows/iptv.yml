@@ -2,7 +2,7 @@ name: Copy and Replace File
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "59 23 1,15 * *"
 
 
 jobs:
